@@ -1,7 +1,6 @@
+Current Version 0.2
 
 FMission Mission Pack
-
-Current Version 0.2
 =============================================
 
 Mission Pack includes
