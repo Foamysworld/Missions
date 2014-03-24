@@ -123,7 +123,7 @@ _aiunitX = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,M1] execVM "\z\addons\dayz
 	
 		_attacker1 = _attackgroup createUnit ["TK_INS_Soldier_3_EP1", _base, [], 0, "Form"];
 			_attacker1 setUnitPos "AUTO";
-			_null = [_attacker1] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Bandit.sqf";
+			[_attacker1] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Bandit.sqf";
 			_attacker1 setUnitPos "Middle";
 
 // Add a Heli Patrol?

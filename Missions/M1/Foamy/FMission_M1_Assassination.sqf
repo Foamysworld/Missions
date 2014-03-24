@@ -21,7 +21,7 @@
 
 // CHECK FOR ANOTHER MISSION 1 RUNNING END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-private ["_missionSpawnChance","_spawnMarker","_spawnRadius","_markerRadius","_markerColor","_loot","_loot_lists","_loot_box","_wait_time","_spawnRoll","_position","_loot_pos","_base","_aiunit_spawn_pos","_aivehicle_spawn_pos","_aiheli_spawn_pos","_targetgroup","_target1","_attackgroup","_attacker1","_attacker2"];
+private ["_missionSpawnChance","_spawnMarker","_spawnRadius","_markerRadius","_markerColor","_loot","_loot_lists","_loot_box","_wait_time","_spawnRoll","_position","_loot_pos","_base","_aiunit_spawn_pos","_aivehicle_spawn_pos","_aiheli_spawn_pos","_targetunitsAlive","_targetgroup","_target1","_attackgroup","_attacker1","_attacker2","_aiunit1","_aiunit2","_aiunit3","_aiunit4","_aiunit5","_timeout"];
 
 diag_log("MISSION 1: Assassination - Script Started");
 
