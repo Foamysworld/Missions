@@ -1,9 +1,9 @@
 /*
 	File Name: FMission_M1_Assassination.sqf
 	File Created: 2/26/2014
-	File Version: 1.1
+	File Version: 1.2
 	File Author: Foamy 
-	File Last Edit Date: 3/23/2014
+	File Last Edit Date: 3/26/2014
 	File Description: Assassination Mission (M1)
 */
 
@@ -78,13 +78,16 @@ _spawnRadius = 5000;
 _spawnMarker = 'center';
 _markerRadius = 350; // Radius the loot can spawn and used for the marker
 _markerColor = "ColorBlue";
+_textMarker_IconType = "mil_objective";
+_markerText = "Mission: Assassination";
+_markerBrush = "SOLID";
 
 // Random location
 _position = [getMarkerPos _spawnMarker,0,_spawnRadius,10,0,20,0] call BIS_fnc_findSafePos;
 _loot_pos = [_position,0,(_markerRadius - 100),10,0,20,0] call BIS_fnc_findSafePos;
 
 // FMarker Launch
-[_position,_loot_pos,_markerRadius,_markerColor,false] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker1.sqf";
+[_position,_loot_pos,_markerRadius,_markerColor,false,_textMarker_IconType,_markerText,_markerBrush] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker1.sqf";
 
 diag_log(format["MISSION 1: Assassination - Spawning loot event at %1", _position]);
  

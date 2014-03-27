@@ -1,9 +1,9 @@
 /*
 	File Name: FMission_M1_Hostage_Rescue.sqf
 	File Created: 12/29/2013
-	File Version: 1.3
+	File Version: 1.4
 	File Author: Foamy 
-	File Last Edit Date: 2/26/2014
+	File Last Edit Date: 3/26/2014
 	File Description: Hostage Rescue Mission (M1)
 */
 
@@ -93,13 +93,16 @@ _spawnRadius = 5000;
 _spawnMarker = 'center';
 _markerRadius = 350; // Radius the loot can spawn and used for the marker
 _markerColor = "ColorGreen";
+_textMarker_IconType = "mil_objective";
+_markerText = "Mission: Hostage Rescue";
+_markerBrush = "SOLID";
 
 // Random location
 _position = [getMarkerPos _spawnMarker,0,_spawnRadius,10,0,20,0] call BIS_fnc_findSafePos;
 _loot_pos = [_position,0,(_markerRadius - 100),10,0,20,0] call BIS_fnc_findSafePos;
 
 // FMarker Launch
-[_position,_loot_pos,_markerRadius,_markerColor,false] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker1.sqf";
+[_position,_loot_pos,_markerRadius,_markerColor,false,_textMarker_IconType,_markerText,_markerBrush] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker1.sqf";
 
 diag_log(format["MISSION 1: Hostage Rescue - Loot event setup, waiting for %1 seconds", _wait_time]);
 

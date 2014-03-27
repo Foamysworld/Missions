@@ -24,7 +24,7 @@
 // CHECK FOR ANOTHER MISSION 3 RUNNING END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Don't forget to add all your "_names" to the private section
-private ["_missionSpawnChance","_spawnMarker","_spawnRadius","_markerRadius","_markerColor","_item","_debug","_loot","_loot_lists","_loot_box","_wait_time","_spawnRoll","_position","_loot_pos","_loot_box"];
+private ["_missionSpawnChance","_spawnMarker","_spawnRadius","_markerRadius","_markerColor","_item","_debug","_loot","_loot_lists","_loot_box","_wait_time","_spawnRoll","_position","_loot_pos","_loot_box","_textMarker_IconType","_markerText","_markerBrush"];
 
 diag_log("MISSION 3: Mission Name - Script Started");
 
@@ -92,8 +92,11 @@ mission_despawn_timer = 1200; // This sets the Timeout if a timer is used.
 _wait_time = 900; // This is how long the loot box will stay once it spawns.
 _spawnRadius = 5000; // This is the distance from Center - Used to determine the radius in which missions will spawn
 _spawnMarker = 'center'; // DO NOT Change this, UNLESS you need a hard coded center loc for custom purposes
-_markerRadius = 350; // This sets marker radius and the are the loot can spawn in
+_markerRadius = 350; // This sets marker radius and the area the loot can spawn in
 _markerColor = "ColorBlue"; // This sets the Marker Color
+_textMarker_IconType = "mil_objective"; // This sets the "Icon Type" (https://community.bistudio.com/wiki/cfgMarkers)
+_markerText = "Mission: Blah Blah"; // Text to display at Marker (Leave "" blank if you dont want a message)
+_markerBrush = "SOLID"; // Marker Brush - How the marker is filled in
 
 // This sets the global position coords the mission needs to run, do not change.
 _position = [getMarkerPos _spawnMarker,0,_spawnRadius,10,0,20,0] call BIS_fnc_findSafePos;
@@ -109,7 +112,7 @@ _aiheli_spawn_pos = [_loot_pos, 30, 50, 30, 0, 20, 0] call BIS_fnc_findSafePos;
 // Read General Script Instructions for Variable Usage per script.
 
 // Add a Marker? Make sure to use FMarker3.sqf for M3 Missions
-[_position,_loot_pos,_markerRadius,_markerColor,false] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker3.sqf";
+[_position,_loot_pos,_markerRadius,_markerColor,false,_textMarker_IconType,_markerText,_markerBrush] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker3.sqf";
 
 // Add a base?
 _base = createVehicle ["Land_fortified_nest_big",_loot_pos,[], 0, "CAN_COLLIDE"];
