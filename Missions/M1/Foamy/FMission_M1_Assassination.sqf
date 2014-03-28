@@ -133,7 +133,7 @@ diag_log("MISSION 1: Assassination - Creating Assassination Target");
 // Add Assassination Target
 _targetgroup = createGroup civilian;
 		_target1 = _targetgroup createUnit ["Hooker4", _base, [], 0, "Form"];
-			_target1 setUnitPos "Middle";
+			_target1 setUnitPos "DOWN";
 			_target1 disableAI "MOVE";
 			_target1 setCaptive true;
 			removeAllItems _target1;
