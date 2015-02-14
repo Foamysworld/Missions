@@ -119,7 +119,7 @@ _base = createVehicle ["Land_fortified_nest_big",_loot_pos,[], 0, "CAN_COLLIDE"]
 _base setPos _loot_pos;
 
 // Add some AI to patrol?
-_aiunitX = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,M1] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
+_aiunitX = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,"M3"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
 
 // Add a one off custom AI?
 	_attackgroup = createGroup east;
@@ -130,10 +130,10 @@ _aiunitX = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,M1] execVM "\z\addons\dayz
 			_attacker1 setUnitPos "Middle";
 
 // Add a Heli Patrol?
-_aiHeli = [_aiheli_spawn_pos,_loot_pos,250,"M1"] execVM "\z\addons\dayz_server\addons\FAI\FMission\FAI_Create_Heli.sqf";
+_aiHeli = [_aiheli_spawn_pos,_loot_pos,250,"M3"] execVM "\z\addons\dayz_server\addons\FAI\FMission\FAI_Create_Heli.sqf";
 
 // Add a Vehicle patrols?
-_aiVehicle = [_aivehicle_spawn_pos,_loot_pos,100,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Vehicle.sqf";
+_aiVehicle = [_aivehicle_spawn_pos,_loot_pos,100,"M3"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Vehicle.sqf";
 
 
 // Create a loot box?
